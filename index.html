@@ -370,5 +370,75 @@
       </div>
     </div>
   </footer>
+  <script>
+  // Mobile Navigation Toggle
+  const navToggle = document.getElementById('nav-toggle');
+  const navMenu = document.getElementById('nav-menu');
+
+  navToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+    navToggle.classList.toggle('active');
+  });
+
+  // Fecha o menu mobile ao clicar em um link
+  document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+    navMenu.classList.remove('show');
+    navToggle.classList.remove('active');
+  }));
+
+  // Rolagem suave para âncoras
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+
+  // Dropdown (se usar)
+  document.querySelectorAll('.dropdown-btn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      this.parentElement.classList.toggle('active');
+    });
+  });
+
+  // Fecha dropdown ao clicar fora
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.dropdown')) {
+      document.querySelectorAll('.dropdown').forEach(dropdown => {
+        dropdown.classList.remove('active');
+      });
+    }
+  });
+
+  // Efeito de scroll no header
+  window.addEventListener('scroll', () => {
+    const header = document.querySelector('.header');
+    if (window.scrollY > 100) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+
+  // Animação dos stats ao rolar
+  const observerOptions = {
+    threshold: 0.7
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate');
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.stat-item, .expertise-card, .course-card').forEach(el => {
+    observer.observe(el);
+  });
+</script>
 </body>
 </html>
