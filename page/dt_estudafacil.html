@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EstudaFácil | Detalhes do Projeto</title>
+  <link rel="stylesheet" href="../css/dt_estudafacil.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <body>
+      <div class="container">
+        <div class="back-btn" style="display:flex; align-items:center; gap:1rem; margin-bottom:2rem;">
+          <a href="../index.html#projects" class="minimal-btn" style="display:inline-flex; align-items:center; padding:0.4em 1em; border:none; background:#5a59595e; color:#7f5cff; border-radius:6px; font-size:1rem; text-decoration:none; transition:background 0.2s;">
+            <i class="fas fa-arrow-left" style="margin-right:0.5em;"></i> Voltar
+          </a>
+          <span style="color:#bbb4b4; font-size:0.7rem;"> Projetos &#8250;  Cleidson Danilo</span>
+        </div>
+        
+        <div class="project-header animate-right" style="display:flex; flex-direction:row-reverse; align-items:center; gap:20px; margin:40px 0;">
+          <div class="project-image animate-left" style="flex:1; min-width:320px; max-width:400px; text-align:center;">
+            <img src="../img/estudafacil.png" alt="EstudaFácil preview">
+          </div>
+          <div class="project-text animate-right" style="flex:2; min-width:320px;">
+            <h1 id="estuda-title" class="eco-title">EstudaFácil <span style="font-size:1.5rem; vertical-align:middle; color:#7f5cff;"><i class="fas fa-book-open"></i></span></h1>
+            <p style="font-size:1.1rem; color:#bbb; margin-bottom:1rem;">Plataforma de organização de estudos com cronograma, integração com Google Agenda, notificações inteligentes e suporte a PWA.</p>
+            <div class="stats">
+              <div class="stat"><span><i class="fas fa-users"></i> +1K</span><br>Usuários</div>
+              <div class="stat"><span><i class="fas fa-calendar-alt"></i> 2025</span><br>Lançamento</div>
+              <div class="stat"><span><i class="fas fa-lightbulb"></i></span><br>Organização Inteligente</div>
+            </div>
+            <div class="buttons">
+              <a href="https://cleidsondanilo.github.io/EstudaFacil/index.html" target="_blank" class="btn live"><i class="fas fa-play"></i> Demo ao Vivo</a>
+              <a href="https://github.com/CleidsonDanilo/EstudaFacil" target="_blank" class="btn github"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+
+    <section class="animate-left">
+      <h2><i class="fas fa-info-circle" style="color:#7f5cff;"></i> Descrição</h2>
+      <p>EstudaFácil é uma plataforma web para organização de estudos, permitindo criar cronogramas, acompanhar tarefas e integrar com Google Agenda.<br><br>
+      <strong>Objetivo:</strong> Facilitar o planejamento e acompanhamento dos estudos.<br>
+      <strong>Plataforma:</strong> Web responsiva, compatível com dispositivos móveis.<br>
+      <strong>Status:</strong> Ativo e em evolução.<br>
+  <strong>Diferenciais:</strong> Cronograma visual, integração com Google Agenda, notificações inteligentes, suporte a PWA e relatórios de desempenho.</p>
+    </section>
+
+    <section class="features animate-right">
+      <h2><i class="fas fa-star" style="color:#7f5cff;"></i> Recursos</h2>
+      <ul>
+        <li><i class="fas fa-calendar-check"></i> Cronograma de estudos</li>
+        <li><i class="fas fa-bell"></i> Notificações de tarefas</li>
+  <li><i class="fas fa-lightbulb"></i> Organização inteligente</li>
+  <li><i class="fab fa-google"></i> Integração com Google Agenda</li>
+  <li><i class="fas fa-mobile"></i> Suporte a PWA</li>
+        <li><i class="fas fa-mobile-alt"></i> Design responsivo</li>
+        <li><i class="fas fa-chart-line"></i> Relatórios de desempenho</li>
+      </ul>
+    </section>
+
+    <section class="animate-left">
+      <h2><i class="fas fa-tools" style="color:#7f5cff;"></i> Tecnologias</h2>
+  <div class="tech-list">
+        <span class="tag"><i class="fab fa-html5"></i> HTML5</span>
+        <span class="tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+        <span class="tag"><i class="fab fa-js-square"></i> JavaScript</span>
+        <span class="tag"><i class="fab fa-bootstrap"></i> Bootstrap</span>
+  <span class="tag"><i class="fab fa-google"></i> Google API</span>
+  <span class="tag"><i class="fas fa-mobile"></i> PWA</span>
+        <span class="tag"><i class="fas fa-database"></i> LocalStorage</span>
+      </div>
+    </section>
+    <section class="animate-right">
+      <h2><i class="fas fa-cogs" style="color:#7f5cff;"></i> Desenvolvimento</h2>
+  <p>O projeto foi desenvolvido com foco em produtividade e organização, utilizando HTML5, CSS3, JavaScript e Bootstrap. A integração com Google Agenda foi feita via API, e as notificações inteligentes ajudam o usuário a não perder prazos importantes.</p>
+    </section>
+  </div>
+  <style>
+  @keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-60px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes slideInRight {
+    from { opacity: 0; transform: translateX(60px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  .animate-left { opacity: 0; animation: slideInLeft 0.8s ease-out forwards; }
+  .animate-right { opacity: 0; animation: slideInRight 0.8s ease-out forwards; }
+  .eco-title { transition: letter-spacing 0.3s, text-shadow 0.3s; cursor: pointer; }
+  .eco-title:hover { letter-spacing: 2px; text-shadow: 0 0 12px #7f5cff; }
+  </style>
+  <script>
+  // Animação de escrita no título
+  const title = document.getElementById('estuda-title');
+  const text = 'EstudaFácil';
+  const book = ' <span style="font-size:1.5rem; vertical-align:middle; color:#7f5cff;"><i class="fas fa-book-open"></i></span>';
+  let i = 0;
+  function typeWriter() {
+    if (i <= text.length) {
+      title.innerHTML = text.substring(0, i) + book;
+      i++;
+      setTimeout(typeWriter, 90);
+    }
+  }
+  window.addEventListener('DOMContentLoaded', () => {
+    // Ativa animação de escrita
+    typeWriter();
+    // Ativa animação de entrada dos blocos
+    document.querySelectorAll('.animate-left, .animate-right').forEach((el, idx) => {
+      setTimeout(() => { el.style.opacity = 1; }, 200 + idx * 150);
+    });
+  });
+  </script>
+</body>
+</html>

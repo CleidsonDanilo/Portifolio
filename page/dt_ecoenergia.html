@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoEnergia | Detalhes do Projeto</title>
+  <link rel="stylesheet" href="../css/dt_ecoenergia.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <body>
+      <div class="container">
+        <div class="back-btn" style="display:flex; align-items:center; gap:1rem; margin-bottom:2rem;">
+          <a href="../index.html#projects" class="minimal-btn" style="display:inline-flex; align-items:center; padding:0.4em 1em; border:none; background:#5a59595e; color:#7f5cff; border-radius:6px; font-size:1rem; text-decoration:none; transition:background 0.2s;">
+            <i class="fas fa-arrow-left" style="margin-right:0.5em;"></i> Voltar
+          </a>
+          <span style="color:#bbb4b4; font-size:0.7rem;"> Projetos &#8250;  Cleidson Danilo</span>
+        </div>
+        <div class="project-header animate-right" style="flex-direction:row-reverse;">
+          <div class="project-image animate-left">
+            <img src="../img/ecoenergia.png" alt="EcoEnergia preview">
+          </div>
+          <div class="project-text animate-right">
+            <h1 id="eco-title" class="eco-title">EcoEnergia <span style="font-size:1.5rem; vertical-align:middle; color:#7f5cff;"><i class="fas fa-leaf"></i></span></h1>
+            <p style="font-size:1.1rem; color:#bbb; margin-bottom:1rem;">Calculadora de consumo energético com interface clean e otimização de UX.</p>
+            <div class="stats">
+              <div class="stat"><span><i class="fas fa-users"></i> +500</span><br>Usuários</div>
+              <div class="stat"><span><i class="fas fa-calendar-alt"></i> 2025</span><br>Lançamento</div>
+              <div class="stat"><span><i class="fas fa-moon"></i></span><br>Modo Escuro</div>
+            </div>
+            <div class="buttons">
+              <a href="https://cleidsondanilo.github.io/EcoEnergia/" target="_blank" class="btn live"><i class="fas fa-play"></i> Demo ao Vivo</a>
+              <a href="https://github.com/CleidsonDanilo/EcoEnergia" target="_blank" class="btn github"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <section class="animate-left">
+          <h2><i class="fas fa-info-circle" style="color:#7f5cff;"></i> Descrição</h2>
+          <p>EcoEnergia é uma calculadora web que permite ao usuário estimar o consumo de energia de aparelhos e ambientes, promovendo economia e consciência ambiental.<br><br>
+          <strong>Objetivo:</strong> Tornar o cálculo de consumo acessível, visual e educativo.<br>
+          <strong>Plataforma:</strong> Web responsiva, compatível com dispositivos móveis.<br>
+          <strong>Status:</strong> Ativo e em evolução.<br>
+          <strong>Diferenciais:</strong> Interface minimalista, modo escuro, gráficos dinâmicos e histórico local.</p>
+        </section>
+
+        <section class="features animate-right">
+          <h2><i class="fas fa-star" style="color:#7f5cff;"></i> Recursos</h2>
+          <ul>
+            <li><i class="fas fa-bolt"></i> Cálculo de consumo diário, mensal e anual</li>
+            <li><i class="fas fa-adjust"></i> Alternância entre tema claro e escuro</li>
+            <li><i class="fas fa-mobile-alt"></i> Design responsivo e otimizado para mobile</li>
+            <li><i class="fas fa-universal-access"></i> Interface intuitiva e acessível</li>
+            <li><i class="fas fa-chart-line"></i> Gráficos de consumo</li>
+            <li><i class="fas fa-save"></i> Salvar histórico local</li>
+          </ul>
+        </section>
+
+        <section class="animate-left">
+          <h2><i class="fas fa-tools" style="color:#7f5cff;"></i> Tecnologias</h2>
+          <div class="tech-list">
+            <span class="tag"><i class="fab fa-html5"></i> HTML5</span>
+            <span class="tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+            <span class="tag"><i class="fab fa-js-square"></i> JavaScript</span>
+            <span class="tag"><i class="fab fa-bootstrap"></i> Bootstrap</span>
+            <span class="tag"><i class="fas fa-database"></i> LocalStorage</span>          </div>
+        </section>
+        <section class="animate-right">
+          <h2><i class="fas fa-cogs" style="color:#7f5cff;"></i> Desenvolvimento</h2>
+          <p>O projeto foi desenvolvido com foco na experiência do usuário, utilizando HTML5, CSS3 e JavaScript para criar uma interface limpa e funcional. O Bootstrap foi empregado para garantir responsividade. O armazenamento local (LocalStorage) foi implementado para salvar o histórico do usuário sem necessidade de backend.</p>
+        </section>
+    <style>
+    @keyframes slideInLeft {
+      from { opacity: 0; transform: translateX(-60px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes slideInRight {
+      from { opacity: 0; transform: translateX(60px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    .animate-left { opacity: 0; animation: slideInLeft 0.8s ease-out forwards; }
+    .animate-right { opacity: 0; animation: slideInRight 0.8s ease-out forwards; }
+    .eco-title { transition: letter-spacing 0.3s, text-shadow 0.3s; cursor: pointer; }
+    .eco-title:hover { letter-spacing: 2px; text-shadow: 0 0 12px #7f5cff; }
+    </style>
+    <script>
+    // Animação de escrita no título
+    const title = document.getElementById('eco-title');
+    const text = 'EcoEnergia';
+    const leaf = ' <span style="font-size:1.5rem; vertical-align:middle; color:#7f5cff;"><i class="fas fa-leaf"></i></span>';
+    let i = 0;
+    function typeWriter() {
+      if (i <= text.length) {
+        title.innerHTML = text.substring(0, i) + leaf;
+        i++;
+        setTimeout(typeWriter, 90);
+      }
+    }
+    window.addEventListener('DOMContentLoaded', () => {
+      // Ativa animação de escrita
+      typeWriter();
+      // Ativa animação de entrada dos blocos
+      document.querySelectorAll('.animate-left, .animate-right').forEach((el, idx) => {
+        setTimeout(() => { el.style.opacity = 1; }, 200 + idx * 150);
+      });
+    });
+    </script>
+    </body>

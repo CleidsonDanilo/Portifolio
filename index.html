@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cleidson Danilo | Estudante de ADS & Desenvolvedor</title>
+  <meta name="description" content="Cleidson Danilo - Estudante de ADS, desenvolvedor de apps e sites, criador de projetos como EcoEnergia e EstudaFácil. Apaixonado por tecnologia, inovação e organização.">
+  
+  <!-- Fonte Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Ícones FontAwesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav">
+      <div class="nav-container">
+        <a href="#home" class="nav-logo">
+          <span class="logo-text">Cleidson Danilo</span>
+        </a>
+        <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item"><a href="#home" class="nav-link">Início</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">Sobre</a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link">Projetos</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contato</a></li>
+        </ul>
+        <div class="nav-toggle" id="nav-toggle">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">
+            <span class="greeting">Olá, eu sou</span>
+            <span class="name typewriter" id="typewriter-name"></span>
+            <span class="subtitle typewriter" id="typewriter-subtitle"></span>
+            <script>
+              // Animação sequencial: nome e subtítulo
+              window.addEventListener('DOMContentLoaded', () => {
+                const nameText = 'Cleidson Danilo';
+                const subtitleText = 'Estudante de ADS | Desenvolvedor Full Stack';
+                const nameEl = document.getElementById('typewriter-name');
+                const subtitleEl = document.getElementById('typewriter-subtitle');
+                let i = 0, j = 0;
+                function typeName() {
+                  if (i <= nameText.length) {
+                    nameEl.textContent = nameText.substring(0, i);
+                    i++;
+                    setTimeout(typeName, 80);
+                  } else {
+                    nameEl.classList.remove('typewriter');
+                    setTimeout(typeSubtitle, 400);
+                  }
+                }
+                function typeSubtitle() {
+                  if (j <= subtitleText.length) {
+                    subtitleEl.textContent = subtitleText.substring(0, j);
+                    j++;
+                    setTimeout(typeSubtitle, 60);
+                  } else {
+                    subtitleEl.classList.remove('typewriter');
+                  }
+                }
+                typeName();
+              });
+            </script>
+            <style>
+              .typewriter {
+                border-right: 2px solid #333;
+                white-space: nowrap;
+                overflow: hidden;
+                display: inline-block;
+                animation: blink-caret 0.7s steps(1) infinite;
+              }
+              @keyframes blink-caret {
+                0%, 100% { border-color: transparent; }
+                50% { border-color: #333; }
+              }
+            </style>
+          </h1>
+          <p class="hero-description">
+            🚀 Estudante de Análise e Desenvolvimento de Sistemas, desenvolvedor de apps e sites, apaixonado por tecnologia e inovação. Criador de projetos como <strong>EcoEnergia</strong> e <strong>EstudaFácil</strong>. 
+          </p>
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-outline">
+              <i class="fas fa-envelope"></i>
+              Entre em Contato
+            </a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="profile-card">
+            <img src="img/cleidson.jpg" alt="Cleidson Danilo" class="profile-img">
+            <div class="profile-info">
+              <h3>Cleidson Danilo</h3>
+              <p>Estudante de ADS | Desenvolvedor Full Stack | Tec em Informatica </p>
+              <div class="social-links">
+                <a href="https://github.com/CleidsonDanilo" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/cleidson-danilo-dev" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/danilodev_/" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:cleidsondanilo18@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Sobre Mim</h2>
+        <p class="section-subtitle">Minha trajetória acadêmica e profissional</p>
+      </div>
+      
+      <div class="about-content">
+        <div class="about-text">
+          <div class="about-item">
+            <div class="about-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div class="about-info">
+              <h3>Formação Acadêmica</h3>
+              <p> Formação Técnica em Informática e estudante de Análise e Desenvolvimento de Sistemas (ADS). Entusiasta da tecnologia, com foco em soluções inteligentes, dados e desenvolvimento web moderno.</p>
+            </div>
+          </div>
+          
+          <div class="about-item">
+            <div class="about-icon"><i class="fas fa-code"></i></div>
+            <div class="about-info">
+              <h3>Desenvolvedor</h3>
+              <p>Tenho experiência no desenvolvimento de sites e aplicativos utilizando HTML, CSS, JavaScript, Bootstrap e PWA. Também possuo conhecimentos em Back-end com Node.js, MySQL, Python e Java, sempre focando em projetos sustentáveis e educacionais.</p>            </div>
+          </div>
+        </div>
+        
+        <div class="stats">
+          <div class="stat-item"><div class="stat-number">5+</div><div class="stat-label">Projetos Autorais</div></div>
+          <div class="stat-item"><div class="stat-number">2+</div><div class="stat-label">Áreas de Atuação</div></div>
+          <div class="stat-item"><div class="stat-number">10</div><div class="stat-label">Membros em Projetos Acadêmicos</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vitrine -->
+<section id="projects" class="portfolio">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Vitrine de Portfólio</h2>
+      <p class="section-subtitle">
+        Explore minha jornada por projetos, certificações e conhecimentos técnicos. 
+        Cada seção representa um marco no meu caminho de aprendizado contínuo.
+      </p>
+    </div>
+
+    <!-- Abas -->
+    <div class="portfolio-tabs">
+      <button class="tab-btn active" data-tab="projetos"><i class="fas fa-code"></i> Projetos</button>
+  <button class="tab-btn" data-tab="certificados"><i class="fas fa-award"></i> Certificados</button>
+      <button class="tab-btn" data-tab="skills"><i class="fas fa-laptop-code"></i> Skills</button>
+    </div>
+
+    <!-- Conteúdo das Abas -->
+    <div class="tab-content active" id="projetos">
+      <div class="portfolio-grid">
+        
+        <!-- Card Projeto 1 -->
+        <div class="portfolio-card">
+          <img src="img/ecoenergia.png" alt="EcoEnergia" class="portfolio-img">
+          <div class="portfolio-info">
+            <h3>EcoEnergia</h3>
+            <p>Site para cálculo de consumo de energia com design moderno, modo escuro e otimização de usabilidade.</p>
+            <div class="portfolio-links">
+              <a href="https://cleidsondanilo.github.io/EcoEnergia/" target="_blank" class="btn-link">Demonstração</a>
+              <a href="page/dt_ecoenergia.html" class="btn-details">Detalhes</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card Projeto 2 -->
+        <div class="portfolio-card">
+          <img src="img/estudafacil.png" alt="EstudaFácil" class="portfolio-img">
+          <div class="portfolio-info">
+            <h3>EstudaFácil</h3>
+            <p>Plataforma de organização de estudos com cronograma, integração com Google Agenda e login seguro.</p>
+            <div class="portfolio-links">
+              <a href="https://cleidsondanilo.github.io/EstudaFacil/index.html" target="_blank" class="btn-link">Demonstração</a>
+              <a href="page/dt_estudafacil.html" class="btn-details">Detalhes</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Certificados -->
+    <div class="tab-content" id="certificados">
+      <div class="portfolio-grid">
+        <div class="portfolio-card">
+          <img src="img/cet_ti.png" alt="Certificado" class="portfolio-img">
+          <div class="portfolio-info">
+            <h3>Diploma Tecnico em Informatica</h3>
+          <p>Certificação que comprova habilidades práticas em desenvolvimento web, programação, suporte técnico e fundamentos de TI. Foco em projetos reais, acessibilidade e boas práticas de mercado.</p>
+          </div>
+        </div>
+        <div class="portfolio-card">
+          <img src="img/cet_javacloud.png" alt="Certificado" class="portfolio-img">
+          <div class="portfolio-info">
+            <h3>Certificado JavaCloud Native</h3>
+            <p>Certificação em desenvolvimento de aplicações Java Cloud Native, abordando microsserviços, APIs REST, containers e integração com plataformas em nuvem.</p>
+          </div>
+        </div>
+      </div>
+    </div>    
+
+ <!-- Skills -->
+    <div class="tab-content" id="skills">
+      <div class="skills-grid">
+        <div class="skills-section">
+          <h4 class="skills-title">Front-end</h4>
+          <div class="skills-list">
+            <div class="skill-item"><i class="fab fa-html5" style="color:#e34c26;"></i> HTML</div>
+            <div class="skill-item"><i class="fab fa-css3-alt" style="color:#1572B6;"></i> CSS</div>
+            <div class="skill-item"><i class="fab fa-js-square" style="color:#f7df1e;"></i> JavaScript</div>
+          </div>
+        </div>
+        <div class="skills-section">
+          <h4 class="skills-title">Back-end</h4>
+          <div class="skills-list">
+            <div class="skill-item"><i class="fab fa-node" style="color:#68A063;"></i> Node.js</div>
+            <div class="skill-item"><i class="fas fa-database" style="color:#00758F;"></i> MySQL</div>
+            <div class="skill-item"><i class="fab fa-python" style="color:#3776AB;"></i> Python</div>
+            <div class="skill-item"><i class="fab fa-java" style="color:#007396;"></i> Java</div>
+          </div>
+        </div>
+        <div class="skills-section">
+          <h4 class="skills-title">Frameworks</h4>
+          <div class="skills-list">
+            <div class="skill-item"><i class="fab fa-bootstrap" style="color:#7952B3;"></i> Bootstrap</div>
+            <div class="skill-item"><i class="fas fa-mobile-alt" style="color:#2196F3;"></i> PWA</div>
+            <!-- Adicione outros frameworks se desejar -->
+          </div>
+        </div>
+        <div class="skills-section">
+          <h4 class="skills-title">Ferramentas</h4>
+          <div class="skills-list">
+            <div class="skill-item"><i class="fas fa-code" style="color:#007ACC;"></i> VS Code</div>
+            <div class="skill-item"><i class="fab fa-git-alt" style="color:#F05032;"></i> Git</div>
+            <div class="skill-item"><i class="fab fa-github" style="color:#181717;"></i> GitHub</div>
+            <div class="skill-item"><i class="fas fa-cloud" style="color:#000000;"></i> Vercel</div>
+            <div class="skill-item"><i class="fas fa-laptop-code" style="color:#2C2255;"></i> Eclipse</div>
+            <div class="skill-item"><i class="fas fa-database" style="color:#00758F;"></i> MySQL Workbench</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Script para trocar abas -->
+<script>
+  const tabs = document.querySelectorAll(".tab-btn");
+  const contents = document.querySelectorAll(".tab-content");
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      tabs.forEach(t => t.classList.remove("active"));
+      contents.forEach(c => c.classList.remove("active"));
+
+      tab.classList.add("active");
+      document.getElementById(tab.dataset.tab).classList.add("active");
+    });
+  });
+</script>
+
+  <!-- Contato -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Entre em Contato</h2>
+        <p class="section-subtitle">Vamos conversar sobre projetos e colaborações</p>
+      </div>
+      
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div class="contact-details">
+              <h3>Email</h3>
+              <a href="mailto:cleidsondanilo18@gmail.com" class="contact-link">Enviar Email</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fab fa-github"></i></div>
+            <div class="contact-details">
+              <h3>GitHub</h3>
+              <a href="https://github.com/CleidsonDanilo" target="_blank" class="contact-link">Ver Projetos</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+            <div class="contact-details">
+              <h3>LinkedIn</h3>
+              <a href="https://www.linkedin.com/in/cleidson-danilo-dev" target="_blank" class="contact-link">Visitar Perfil</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fab fa-instagram"></i></div>
+            <div class="contact-details">
+              <h3>Instagram</h3>
+              <a href="https://www.instagram.com/danilodev_/" target="_blank" class="contact-link">@danilodev_</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-cta">
+          <div class="cta-card">
+            <h3>🚀 Vamos trabalhar juntos?</h3>
+            <p>Aberto a colaborações em desenvolvimento de sistemas, análise de dados e projetos acadêmicos.</p>
+            <a href="mailto:cleidsondanilo18@gmail.com?subject=Colaboração" class="btn btn-primary">
+              <i class="fas fa-handshake"></i>
+              Fale Comigo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <div class="footer-logo">
+            <h3>Cleidson Danilo</h3>
+            <p>Estudante de ADS | Desenvolvedor Full Stack | Tec em Informatica</p>
+          </div>
+          <p class="footer-description">
+            Transformando ideias em projetos e sempre buscando inovação no desenvolvimento de sistemas e na organização de pessoas.
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-update">
+          <p>Última atualização: <span id="last-update">23 de Agosto, 2025</span></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
