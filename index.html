@@ -5,24 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Cleidson Danilo | Estudante de ADS & Desenvolvedor</title>
   <meta name="description" content="Cleidson Danilo - Estudante de ADS, desenvolvedor de apps e sites, criador de projetos como EcoEnergia e EstudaFácil. Apaixonado por tecnologia, inovação e organização.">
-  
-  <!-- Fonte Google -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
-
-  <!-- Ícones FontAwesome -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-  />
-
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <!-- Estilos -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
   <!-- Header -->
   <header class="header">
@@ -54,7 +46,7 @@
             <span class="name typewriter" id="typewriter-name"></span>
             <span class="subtitle typewriter" id="typewriter-subtitle"></span>
             <script>
-              // Animação sequencial: nome e subtítulo
+              // Animação sequencial: nome com digitação natural e subtítulo
               window.addEventListener('DOMContentLoaded', () => {
                 const nameText = 'Cleidson Danilo';
                 const subtitleText = 'Estudante de ADS | Desenvolvedor Full Stack';
@@ -65,7 +57,9 @@
                   if (i <= nameText.length) {
                     nameEl.textContent = nameText.substring(0, i);
                     i++;
-                    setTimeout(typeName, 80);
+                    // Varia o tempo para simular digitação humana
+                    const delay = Math.floor(Math.random() * 60) + 60;
+                    setTimeout(typeName, delay);
                   } else {
                     nameEl.classList.remove('typewriter');
                     setTimeout(typeSubtitle, 400);
@@ -75,7 +69,9 @@
                   if (j <= subtitleText.length) {
                     subtitleEl.textContent = subtitleText.substring(0, j);
                     j++;
-                    setTimeout(typeSubtitle, 60);
+                    // Varia o tempo para simular digitação humana
+                    const delay = Math.floor(Math.random() * 50) + 50;
+                    setTimeout(typeSubtitle, delay);
                   } else {
                     subtitleEl.classList.remove('typewriter');
                   }
